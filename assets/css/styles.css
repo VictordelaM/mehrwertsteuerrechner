@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 2.5%;
+}
+
+.frame{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.386);
+    border-radius: 5%;
+    padding: 5%;
+    box-shadow: 0 0 15px black;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.labelBox{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2.5%;
+    margin: 2.5%;
+}
+
+input[type=number]{
+    height: 2.5vh;
+}
+
+input[type=submit]{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}

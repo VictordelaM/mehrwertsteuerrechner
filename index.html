@@ -8,40 +8,50 @@
 </head>
 <body>
     <h1>Mehrwertsteuer-Rechner</h1>
-    <form action="" onsubmit="calc(); return false">
-        <div class="box" oninput="display()">
-            <h3>Was soll berechnet werden?</h3>
-            <input type="radio" name="auf/ab" id="netto">
-            <label for="">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
-            <input type="radio" name="auf/ab" id="brutto">
-            <label for="">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+    <div class="frame">
+        <form action="" onsubmit="calc(); return false">
+            <div class="box" oninput="display()">
+                <h3>Was soll berechnet werden?</h3>
+                <div class="labelBox">
+                    <input type="radio" name="auf/ab" id="netto">
+                    <label for="">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                </div>
+                <div class="labelBox">
+                    <input type="radio" name="auf/ab" id="brutto">
+                    <label for="">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Was soll berechnet werden?</h3>
+                <div class="labelBox">
+                    <input type="radio" name="satz" id="viel">
+                    <label for="">19%</label>
+                </div>
+                <div class="labelBox">
+                    <input type="radio" name="satz" id="wenig">
+                    <label for="">7%</label>
+                </div>
+            </div>
+            <div class="box">
+                <label for="" id="ausgabe"><span id="star">*</span></label>
+                <input type="number" name="" id="betrag">
+            </div>
+            <input type="submit" value="Berechnen">
+        </form>
+        <h2>Ergebnis</h2>
+        <div class="labelBox">
+            <p>Mehrwertsteuerbetrag</p>
+            <div>
+                <p id="mehrwertsteuerBetrag"></p>
+                <p>€</p>
+            </div>
         </div>
-        <div class="box">
-            <h3>Was soll berechnet werden?</h3>
-            <input type="radio" name="satz" id="viel">
-            <label for="">19%</label>
-            <input type="radio" name="satz" id="wenig">
-            <label for="">7%</label>
-        </div>
-        <div class="box">
-            <label for="" id="ausgabe"><span id="star">*</span></label>
-            <input type="number" name="" id="betrag">
-        </div>
-        <input type="submit" value="Berechnen">
-    </form>
-    <h2>Ergebnis</h2>
-    <div class="box">
-        <p>Mehrwertsteuerbetrag</p>
-        <div>
-            <p id="mehrwertsteuerBetrag"></p>
-            <p>€</p>
-        </div>
-    </div>
-    <div class="box">
-        <p id="steuerBetragArt"></p>
-        <div>
-            <p id="steuerBetrag"></p>
-            <p>€</p>
+        <div class="labelBox">
+            <p id="steuerBetragArt"></p>
+            <div>
+                <p id="steuerBetrag"></p>
+                <p>€</p>
+            </div>
         </div>
     </div>
     <script src="assets/js/main.js"></script>
